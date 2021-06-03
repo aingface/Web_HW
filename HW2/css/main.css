@@ -3,7 +3,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: white;
 }
 ul:after{
     content:'';
@@ -15,13 +15,13 @@ li {
 }
 li a {
     display: block;
-    color: white;
+    color: black;  / /
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 18px;
     text-decoration: none;
 }
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: red;   /* 마우스 갖다 대면 메뉴 바탕 색 바뀜*/
 }
 .active {
     background-color: #4CAF50;
