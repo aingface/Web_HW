@@ -62,10 +62,36 @@ ul{
   display: block;
   z-index: 600;
 }
+
 body{
   background-color: rgb(247,229,205);
   font:'맑은 고딕';
-  font-size: 17px;
+  font-size: 15px;
+  /* text-align: center; */
+}
+
+#main_text{
+  display: block;
+  /* border: 3px dotted red; */
+  text-align: center;
+  margin: 15px;
+}
+
+#img_alchol{
+  /* display: inline-block; */
+  /* border: 5px dotted green; */
+  margin-top: 10px;
+
+}
+
+#alcohol_describe{
+
+  word-wrap: break-word;
+  top:50px;
+}
+#img_introduce{
+width: 50%;
+height: 50%;
 }
 
 
