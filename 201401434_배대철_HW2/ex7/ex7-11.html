@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <head>
+
+    <title>ex7-11 프로토 타입으로 객체 만들기</title>
+    <script>
+      function account(owner,code,balance){
+        //프로퍼티 작성
+          this.owner=owner;
+          this.code=code;
+          this.balance=balance;
+        //메소드 작성
+        this.inqury=function(){return this.balance;}
+        this.deposit=function(money){this.balance+=money;}
+        this.withdraw=function(money){this.balance-=money;}
+      }
+    </script>
+  </head>
+  <body>
+    <h3>ex7-11 프로토 타입으로 객체 만들기</h3>
+    <hr>
+    <script>
+      //연산자를 이용하여 객체 생성
+      var account= new account('배대철','1234',100000000);
+      //객체 활용
+      document.write("account: ");
+      document.write(account.owner+",");
+      document.write(account.code+",");
+      document.write(account.balance+"<br>");
+
+      account.deposit(1000000);
+      document.write("1000000원 저금 후 잔액은 "+account.inqury()+"<br>");
+      account.withdraw(30000000);
+      document.write("1000000원 출금 후 잔액은 "+account.inqury()+"<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <head>
+    <title>ex7-8 Math를 활용한 구구단 연습</title>
+    <script>
+        function randomInt(){ //1~9사이의 랜덤 정수 리턴
+        return Math.floor(Math.random()*9)+1;// 최솟값 1증가를 위한 +1
+      }// 1~9사이 랜덤 정수
+    </script>
+  </head>
+  <body>
+    <h3>ex7-8 Math를 활용한 구구단 연습</h3>
+    <hr>
+    <script>
+      //구구단 문제 생성
+      var quiz=randomInt()+ "*" +randomInt();
+      //사용자로부터 답 입력
+      var user=prompt(quiz+" 값은 얼마입니까?", 0);
+
+      if(user==null){
+        document.write("구구단 연습을 종료합니다.");//그냥 끈 경우
+      }
+      else {
+        var ans = eval(quiz);//구구단 정답계산
+        if(ans==user)
+          document.write("정답!");
+        else {
+          document.write('오답! ');
+          document.write(quiz+"="+"<strong>"+ans+"</strong>입니다.<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

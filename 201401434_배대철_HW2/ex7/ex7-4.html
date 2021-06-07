@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <head>
+
+    <title>ex7-4 Array 객체의 메소드 활용 </title>
+    <script>
+      function pr(msg,arr){
+        document.write(msg+arr.toString()+"<br>");
+      }
+    </script>
+  </head>
+  <body>
+    <h3>ex7-4 Array 개게의 메소드 활용</h3>
+    <hr>
+    <script>
+      var a= new Array("황","김","이");
+      var b= new Array("박");
+      var c;
+
+      pr("배열 a=",a);
+      pr("배열 b=",b);
+      document.write("<br>");
+
+      c=a.concat(b);
+      pr("c=a.concat(b) 후 c=", c);
+      pr("c=a.concat(b) 후 a=", a);
+
+      c=a.join("~~");// 배열 a의 각 원소 사이에 "~~"을 삽입하여 연결
+      pr("c=a.join() 후 c=", c);
+      pr("c=a.join() 후 a=", a);
+
+      c=a.reverse(); //배열 a의 원소를 역순으로 재배열, a에도 영향 줌
+      pr("c=a.reverse() 후 c=",c);
+      pr("c=a.reverse() 후 a=",a);
+
+      c=a.sort();//배열 a의 원소를 오름차순으로 정렬
+      pr("c=a.sort() 후 c=", c);
+      pr("c=a.sort() 후 a=", a);
+
+      c=a.toString(); //배열 a의 각 원소 사이에 ","를 삽입한 문자열 리턴.
+      document.write("a.toString():"+ c); // c는 문자열
+
+      document.write("<br>");
+
+      var test= Array(1);
+      test[2]= "배열크기 1로 초기화 했는데 2에 저장이 된다고?";
+      document.write("test: "+ test[2]);
+
+
+
+    </script>
+  </body>
+</html>
